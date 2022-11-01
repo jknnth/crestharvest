@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.galle {
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  width: 80%;
+  margin: auto;
+  margin-top: 90px;
+}
+
+.hex {
+  width: 20%;
+  float: left;
+  min-height: 1px;
+  position: relative;
+}
+
+.hex-offset {
+  margin-left: 10%;
+}
+
+.hexagon {
+  position: absolute;
+  width: 210px;
+  height: 250px;
+  top: -85px;
+  overflow: hidden;
+  visibility: hidden;
+  transform: rotate(120deg);
+  cursor: pointer;
+}
+
+.in1 {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-60deg);
+}
+
+.in2 {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 125%;
+  visibility: visible;
+  transform: rotate(-60deg);
+  transition: all 0.5s ease;
+}
+
+.in2:hover {
+  box-shadow: inset 0 0 0 200px rgba(36,36,36,0.7);
+}
+
+.gallery-item {
+  background-color: #fff;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  display: block;
+  transition: all 50ms ease-in-out;
+}
+
+.gallery-item .overlay a{
+  color: #2a2a2a;
+  width: 32px;
+  height: 32px;
+  background-color: #d3b850;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -16px;
+  margin-left: -16px;
+}
+
+#lightbox {
+  cursor: pointer;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(000, 000, 000, 0.7);
+}
+
+#lightbox img {
+  display: block;
+  position: absolute;
+  box-shadow: 0 0 20px #000;
+  border-radius: 1px;
+}
+
+.lightbox-button {
+  position: absolute;
+  z-index: 9999;
+  background: no-repeat center center;
+  width: 32px;
+  height: 32px;
+  opacity: 0.4;
+  transition: all 0.3s;
+}
+
+.lightbox-button:hover, .lightbox-button:focus {
+  opacity: 1;
+  transform: scale(1.4);
+}
+
+.lightbox-close {
+  right: 30px;
+  top: 30px;
+  background-image: url("images/close.png");
+}
+
+.lightbox-next {
+  right: 30px;
+  top: 48%;
+  background-image: url("images/next.png");
+}
+
+.lightbox-previous {
+  left: 30px;
+  top: 48%;
+  background-image: url("images/previous.png");
+}
+
+@media only screen and (min-device-width: 320px) and (max-width: 419px) {
+  .hex {
+    width: 33%;
+    margin-left: 30px;
+    min-height: 1px;
+  }  
+
+  .hexagon {
+    position: absolute;
+    width: 110px;
+    height: 128px;
+    top: 0px;
+  }
+
+  .top1 {
+    margin-top: 100px;
+  }
+
+  .top2 {
+    margin-top: 100px;
+    margin-left: 30%;
+  }
+
+  .top3 {
+    margin-top: 100px;
+  }
+
+  .main {
+    margin: auto;
+    margin-top: 90px;
+  }
+
+}
+
+@media (min-width: 420px) and (max-width: 559px){
+  .hex {
+    width: 50%;
+    float: left;
+    min-height: 1px;
+  }
+
+  .hexagon {
+    position: absolute;
+    width: 150px;
+    height: 175px;
+    top: 0px;
+  }
+
+  .top1 {
+    margin-top: 300px;
+  }
+
+  .top2 {
+    margin-top: 130px;
+    margin-left: 25%;
+  }
+
+  .top3 {
+    margin-top: 130px;
+  }
+
+  .main {
+    margin: auto;
+    margin-top: 90px;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 767px) {
+  .hex {
+    width: 50%;
+    float: left;
+    min-height: 1px;
+  }
+
+  .hexagon {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 0px;
+  }
+
+  .top1 {
+    margin-top: 300px;
+  }
+
+  .top2 {
+    margin-top: 180px;
+    margin-left: 25%;
+  }
+
+  .top3 {
+    margin-top: 180px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hexagon {
+    position: absolute;
+    width: 120px;
+    height: 180px;
+    top: -85px;
+  }
+
+  .top1 {
+    margin-top: 110px;
+  }
+}
+
+@media (min-width: 992px) {
+  .hexagon {
+    position: absolute;
+    width: 150px;
+    height: 250px;
+    top: -85px;
+  }
+
+  .top1 {
+    margin-top: 140px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hexagon {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: -85px;
+  }
+
+  .top1 {
+    margin-top: 185px;
+  }
+}
